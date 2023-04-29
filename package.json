@@ -1,0 +1,26 @@
+{
+  "name": "nft-creator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "network": "npx hardhat node",
+    "compile": "npx hardhat compile",
+    "re-compile": "npx hardhat clean && npx hardhat compile",
+    "deploy to hardhat": "npx hardhat run scripts/deploy-dev.ts --network localhost",
+    "deploy to sepolia": "npx hardhat run scripts/deploy-prod.ts --network sepolia",
+    "test": "npx hardhat test",
+    "coverage": "npx hardhat coverage",
+    "flattern": "npx hardhat flatten contracts/NFTCreator.sol > flattern/NFTCreatorFlattened.sol"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^2.0.2",
+    "hardhat": "^2.14.0"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.8.3",
+    "dotenv": "^16.0.3"
+  }
+}
